@@ -4,7 +4,7 @@ __pycache__/
 
 # macOS specific ignores
 .DS_Store
-
+.env
 # Visual Studio Code specific ignores (if you use it)
 .vscode/
 

@@ -5,11 +5,20 @@ from datetime import datetime
 def get_db_connection():
     return psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "db"),
-        database=os.getenv("POSTGRES_DB", "mnist"),
+        database=os.getenv("POSTGRES_DB", "mnist_db"),
         user=os.getenv("POSTGRES_USER", "postgres"),
-        password=os.getenv("POSTGRES_PASSWORD", "postgres")
+        password=os.getenv("POSTGRES_PASSWORD", "postgres"),
     )
 
+## To run the code in local machine, use the below code. Thin include change the postgres_host, the password of the database and the port number.
+#     return psycopg2.connect(
+#         host=os.getenv("POSTGRES_HOST", "localhost"),
+#         database=os.getenv("POSTGRES_DB", "mnist_db"),
+#         user=os.getenv("POSTGRES_USER", "postgres"),
+#         password=os.getenv("POSTGRES_PASSWORD", "Password@23"),
+#         port=os.getenv("POSTGRES_PORT", "5432")
+#     )
+    
 def init_db():
     conn = get_db_connection()
     cur = conn.cursor()

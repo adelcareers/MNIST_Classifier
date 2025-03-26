@@ -1,0 +1,23 @@
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+
+# macOS specific ignores
+.DS_Store
+
+# Visual Studio Code specific ignores (if you use it)
+.vscode/
+
+# Data folder (as requested)
+data/
+
+# Conda environment related
+env/
+envs/
+conda-meta/
+
+# Other common ignores
+*.log
+*.tmp
+*.swp
+*.bak
